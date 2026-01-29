@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoatSale – Fashion That Leads</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+body{background:#0d0d0d;color:#eaeaea;line-height:1.7;}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:linear-gradient(90deg,#2a003f,#5e17eb);
+  padding:25px 10px;
+  text-align:center;
+  z-index:1000;
+  box-shadow:0 3px 10px rgba(0,0,0,0.5);
+}
+header h1{
+  font-size:32px;
+  letter-spacing:3px;
+  color:white;
+  cursor:pointer;
+}
+nav{margin-top:10px;}
+nav a{
+  color:#d6c6ff;
+  margin:0 18px;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+nav a:hover{color:white;}
+
+.container{max-width:1300px;margin:auto;padding:170px 25px 80px;}
+section{margin-bottom:90px;}
+h2{color:#bb86fc;margin-bottom:20px;font-size:30px;}
+
+/* HERO */
+.hero{
+  background:url('https://images.unsplash.com/photo-1520975869018-6d4d7d9c8e9d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  padding:140px 30px;
+  border-radius:12px;
+  text-align:center;
+}
+.hero h2{font-size:48px;color:white;}
+.hero p{max-width:850px;margin:20px auto;font-size:18px;color:#f1e9ff;}
+.btn{
+  background:#7b2cff;
+  color:white;
+  padding:12px 22px;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+}
+.btn:hover{background:#9b4dff;}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.card{
+  background:#161616;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 0 12px rgba(123,44,255,0.2);
+  text-align:center;
+}
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:8px;
+}
+.price{color:#bb86fc;font-weight:bold;margin:10px 0;}
+.card button{margin-top:8px;}
+
+/* INFO SECTIONS */
+.content-box{
+  background:#141414;
+  padding:40px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(123,44,255,0.15);
+}
+
+/* FOOTER */
+footer{
+  background:linear-gradient(90deg,#2a003f,#5e17eb);
+  padding:50px 20px;
+  color:#ddd;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+footer h3{color:white;margin-bottom:15px;}
+footer a{display:block;color:#d6c6ff;text-decoration:none;margin-bottom:8px;}
+footer a:hover{color:white;}
+footer p{font-size:14px;}
+</style>
+
+<script>
+function go(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+</head>
+<body>
+
+<header>
+  <h1 onclick="go('home')">GoatSale</h1>
+  <nav>
+    <a onclick="go('home')">Home</a>
+    <a onclick="go('shop')">Shop</a>
+    <a onclick="go('about')">About</a>
+    <a onclick="go('contact')">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h2>Lead the Style. Be the G.O.A.T.</h2>
+  <p>GoatSale is not just a clothing store — it’s a movement for bold individuals who lead trends instead of following them. Our fashion blends street confidence with modern elegance, powered by premium quality and fearless design.</p>
+  <button class="btn" onclick="go('shop')">Shop the Drop</button>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+  <h2>Featured Collection</h2>
+  <div class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520975698519-59f4f0b09d79?auto=format&fit=crop&w=600&q=80">
+      <h3>Urban Street Hoodie</h3>
+      <div class="price">$79</div>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503342452485-86b7f54527d8?auto=format&fit=crop&w=600&q=80">
+      <h3>Classic Black Jacket</h3>
+      <div class="price">$120</div>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80">
+      <h3>Violet Street Tee</h3>
+      <div class="price">$45</div>
+      <button class="btn">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520975918318-6c0f7a1a0b8b?auto=format&fit=crop&w=600&q=80">
+      <h3>Premium Denim Fit</h3>
+      <div class="price">$95</div>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About GoatSale</h2>
+  <div class="content-box">
+    <p>GoatSale was built for individuals who refuse to blend in. Our brand celebrates confidence, ambition, and the drive to stand at the top. The name GoatSale represents “Greatest Of All Trends” — a space where fashion leaders find styles that match their energy and mindset. Every piece we release is designed with attention to detail, comfort, and impact. We focus on premium fabrics, sharp tailoring, and statement aesthetics that help our customers feel powerful every day.</p>
+
+    <p>Fashion is more than clothing — it is identity, attitude, and communication without words. At GoatSale, we believe what you wear should express your personality and ambition. Our design team studies global fashion movements, street culture, and luxury influences to create collections that feel modern yet timeless. From bold hoodies to sleek outerwear, every item is built to make a statement while remaining versatile enough for everyday wear.</p>
+
+    <p>We are deeply committed to quality. Our production partners follow strict standards to ensure durability, comfort, and sustainability. We choose materials that feel soft, breathe well, and maintain their shape over time. Our goal is to create clothing that not only looks good on day one but continues to look great after many wears. GoatSale customers invest in pieces that last, reducing waste and supporting smarter fashion choices.</p>
+
+    <p>Customer experience is at the heart of our brand. We aim to make shopping effortless, enjoyable, and inspiring. From easy navigation to responsive support, every part of our store is designed with you in mind. We listen closely to our community and continuously improve based on feedback. GoatSale is not just a store — it is a growing fashion community driven by shared passion and creativity.</p>
+
+    <p>As we grow, our mission remains the same: empower individuals to feel confident, stylish, and unstoppable. GoatSale stands for bold expression, fearless ambition, and fashion that leads instead of follows. When you wear GoatSale, you wear confidence.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Get in Touch</h2>
+  <div class="content-box">
+    <p>We’re here to help with styling advice, order questions, or anything else you need. Our support team is passionate about making your experience smooth and enjoyable.</p>
+    <p><strong>Email:</strong> support@goatsale.com</p>
+    <p><strong>Phone:</strong> +1 (800) 555-GOAT</p>
+    <p><strong>Hours:</strong> Monday – Friday, 9AM – 6PM</p>
+    <p>Follow us on social media to stay updated on new drops, exclusive offers, and style inspiration from the GoatSale community.</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>About GoatSale</h3>
+      <p>GoatSale delivers bold, premium fashion for individuals who lead trends. We combine modern streetwear aesthetics with high-quality craftsmanship to create clothing that stands out and lasts.</p>
+    </div>
+    <div>
+      <h3>Shop</h3>
+      <a href="#">New Arrivals</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Streetwear</a>
+      <a href="#">Outerwear</a>
+    </div>
+    <div>
+      <h3>Support</h3>
+      <a href="#">Contact Us</a>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Returns & Refunds</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:40px;">© 2026 GoatSale – Fashion That Leads</p>
+</footer>
+
+</body>
+</html>
